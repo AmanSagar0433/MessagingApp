@@ -1,7 +1,8 @@
 # PeerTalk
 
 ## About
-A real time one-to-one chat application that has a frontend build with React using typescript and backend build with express which used mongodb as the database
+- A real time one-to-one chat application that has a frontend build with React using typescript and backend build with express which used mongodb as the database.
+- It has online indicator feature to show whether user is online or not
 
 ## Table of Contents
 - [Bult using](#bult-using)
@@ -13,7 +14,7 @@ A real time one-to-one chat application that has a frontend build with React usi
 - [Upcoming Features and Enhancements](#upcoming-features-and-enhancements)
 - [Current Demo](#current-demo)
 
-### Bult using
+### Built using
 
 * **Backend**
     - Typescript
@@ -80,8 +81,10 @@ npm run dev
 
 ### Upcoming Features and Enhancements
 - Support for group chat
+- Support for black theme
 - User will be able to edit and delete the message
 - Video calling feature using WebRTC
 
 ### Current Demo
+![Login Demo](./Files/login.gif)
 ![React Web App Demo](./Files/react-web-app.gif)

@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "d6dcd09c-722b-4abb-a521-ae5f54857349",
+		"name": "peertalk-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23088325"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"7667226074\",\r\n    \"name\": \"Aman Sagar\",\r\n    \"password\": \"anuraghkmr123@A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8081/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"register"
+					]
+				},
+				"description": "This is a sign-up API that accepts a phone number, name, and password to register users"
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"7667226074\",\r\n    \"name\": \"Aman Sagar\",\r\n    \"password\": \"anuraghkmr123@A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-DXJDEAdy/TklQyIxDe6TaFldXw4\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 28 May 2024 02:44:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"SUCCESS\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"7667226074\",\r\n    \"password\": \"anuraghkmr123@A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8081/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "This is login api which takes phone number and password for authenticating users"
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"7667226074\",\r\n    \"password\": \"anuraghkmr123@A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "Authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU0NTA4NzkxODE0MzY1MjZmNDc0NyIsImlhdCI6MTcxNzY2NjMyMywiZXhwIjoxNzE3NzUyNzIzfQ.M0XyuOm1qbWO3LXLaLQXnP7G9qAngcyB1R6QUPNdw5g; Path=/; Expires=Fri, 07 Jun 2024 09:32:03 GMT; HttpOnly; Secure; SameSite=Strict"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-/YISgZUwGVZv9c4ZNLuQZ4sQIZo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 09:32:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU0NTA4NzkxODE0MzY1MjZmNDc0NyIsImlhdCI6MTcxNzY2NjMyMywiZXhwIjoxNzE3NzUyNzIzfQ.M0XyuOm1qbWO3LXLaLQXnP7G9qAngcyB1R6QUPNdw5g\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/user/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"all"
+					]
+				},
+				"description": "This API retrieves all users who are already registered."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/user/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ed-kjP1CdWe/ktDwadtKxQQ/94+1oc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Jun 2024 06:56:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"665316c073139c1e4878bb0b\",\n        \"number\": \"9876543210\",\n        \"name\": \"Anurag Sagar\"\n    },\n    {\n        \"_id\": \"6655450879181436526f4747\",\n        \"number\": \"7667226074\",\n        \"name\": \"Aman Sagar\"\n    },\n    {\n        \"_id\": \"66654e01c3d92da46f43073f\",\n        \"number\": \"7654321890\",\n        \"name\": \"Vikram aditya\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get logged-in user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/user/logged-in",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"logged-in"
+					]
+				},
+				"description": "This API provides the details of the logged-in user using the JWT payload."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/user/logged-in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"logged-in"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52-2nBcORRNu0+OtGELYH1iBR1OzB8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Dec 2024 04:50:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"67527e54b8bbb94e2e3f8df5\",\n        \"number\": \"1234567890\",\n        \"name\": \"Shubham\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get messages using conversation id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/messages/675311e11f60217f180ad855?page=1&size=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"messages",
+						"675311e11f60217f180ad855"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				},
+				"description": "This is a pagination API that retrieves messages based on the conversation ID, page number, and page size."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/messages/675311e11f60217f180ad855?page=1&size=10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"messages",
+								"675311e11f60217f180ad855"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "698"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2ba-bwN4+nj2rFlbodv4FYV8Vmr2egw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Dec 2024 15:12:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"675311f81f60217f180ad863\",\n        \"msg\": \"I am doing good\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:16.116Z\",\n        \"senderId\": \"674d51aa9116677ed8687c96\"\n    },\n    {\n        \"_id\": \"675311f21f60217f180ad85f\",\n        \"msg\": \"how u r doing\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:10.740Z\",\n        \"senderId\": \"67527e54b8bbb94e2e3f8df5\"\n    },\n    {\n        \"_id\": \"675311e81f60217f180ad85b\",\n        \"msg\": \"hellow\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:00.324Z\",\n        \"senderId\": \"674d51aa9116677ed8687c96\"\n    },\n    {\n        \"_id\": \"675311e11f60217f180ad857\",\n        \"msg\": \"Hi \",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:01:53.838Z\",\n        \"senderId\": \"67527e54b8bbb94e2e3f8df5\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get messages using sender id and user id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/messages-using-ids?page=1&size=10&userId=67527e54b8bbb94e2e3f8df5&friendId=674d51aa9116677ed8687c96",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"messages-using-ids"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "userId",
+							"value": "67527e54b8bbb94e2e3f8df5"
+						},
+						{
+							"key": "friendId",
+							"value": "674d51aa9116677ed8687c96"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/messages-using-ids?page=1&size=10&userId=67527e54b8bbb94e2e3f8df5&friendId=674d51aa9116677ed8687c96",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"messages-using-ids"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "userId",
+									"value": "67527e54b8bbb94e2e3f8df5"
+								},
+								{
+									"key": "friendId",
+									"value": "674d51aa9116677ed8687c96"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "698"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2ba-bwN4+nj2rFlbodv4FYV8Vmr2egw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Dec 2024 15:46:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"675311f81f60217f180ad863\",\n        \"msg\": \"I am doing good\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:16.116Z\",\n        \"senderId\": \"674d51aa9116677ed8687c96\"\n    },\n    {\n        \"_id\": \"675311f21f60217f180ad85f\",\n        \"msg\": \"how u r doing\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:10.740Z\",\n        \"senderId\": \"67527e54b8bbb94e2e3f8df5\"\n    },\n    {\n        \"_id\": \"675311e81f60217f180ad85b\",\n        \"msg\": \"hellow\",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:02:00.324Z\",\n        \"senderId\": \"674d51aa9116677ed8687c96\"\n    },\n    {\n        \"_id\": \"675311e11f60217f180ad857\",\n        \"msg\": \"Hi \",\n        \"conversationId\": \"675311e11f60217f180ad855\",\n        \"timestamp\": \"2024-12-06T15:01:53.838Z\",\n        \"senderId\": \"67527e54b8bbb94e2e3f8df5\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Retrieves users previously conversed with by the user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/conversation/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"conversation",
+						"all"
+					]
+				},
+				"description": "This API retrieves the details of all users with whom a particular user has previously had conversations, based on the JWT payload."
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/conversation/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"conversation",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-w50cvNbY/fV8Auc+pIrfwkXrXZI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Dec 2024 16:05:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"675311e11f60217f180ad855\",\n        \"lastMessage\": \"I am doing good\",\n        \"lastMessageTime\": 1733497336116,\n        \"friend\": {\n            \"_id\": \"674d51aa9116677ed8687c96\",\n            \"number\": \"9876543210\",\n            \"name\": \"Anurag Sagar\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}

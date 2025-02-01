@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --primary: 20,100%,50%;
-    --background: 27,100%,98%;
-    
+    --primary: 20 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --background: 27 100% 98%;   
 }

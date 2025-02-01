@@ -12,6 +12,7 @@ import ic_person from "../assets/icons/ic_person.svg";
 import ic_research_logo from "../assets/icons/ic_research_logo.svg";
 import { useAppSelector } from "../hooks/useRedux";
 import { LOADING_STATUS } from "../constants/enums";
+import { Button } from "../components/Button";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -97,17 +98,16 @@ export default function Login() {
                       </p>
                     )}
                   </>
-                  <>
-                    <button
-                      type="submit"
-                      disabled={loadingStatus === LOADING_STATUS.LOADING}
-                      className="w-full h-10 bg-primary disabled:bg-slate-500 text-white text-sm rounded-[5px] mt-[20px]"
-                    >
-                      {loadingStatus === LOADING_STATUS.LOADING
-                        ? "Loging in..."
-                        : "LOGIN"}
-                    </button>
-                  </>
+                  <Button
+                    className="mt-[20px]"
+                    sizeVariant="md"
+                    type="submit"
+                    disabled={loadingStatus === LOADING_STATUS.LOADING}
+                  >
+                    {loadingStatus === LOADING_STATUS.LOADING
+                      ? "Loging in..."
+                      : "LOGIN"}
+                  </Button>
                 </form>
 
                 <div className="flex mt-2 justify-center">

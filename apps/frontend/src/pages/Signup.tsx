@@ -12,6 +12,7 @@ import ic_person from "../assets/icons/ic_person.svg";
 import { useAppSelector } from "../hooks/useRedux";
 import { LOADING_STATUS } from "../constants/enums";
 import ic_research_logo from "../assets/icons/ic_research_logo.svg";
+import { Button } from "../components/Button";
 
 export default function SignUp() {
   const { response, setSignUpData } = useSignUp();
@@ -121,17 +122,16 @@ export default function SignUp() {
                       </p>
                     )}
                   </>
-                  <>
-                    <button
-                      type="submit"
-                      disabled={loadingStatus === LOADING_STATUS.LOADING}
-                      className="w-full h-10 bg-primary disabled:bg-slate-500 text-white text-sm rounded-[5px] mt-[20px]"
-                    >
-                      {loadingStatus === LOADING_STATUS.LOADING
-                        ? "Signing up..."
-                        : "SIGNUP"}
-                    </button>
-                  </>
+                  <Button
+                    type="submit"
+                    disabled={loadingStatus === LOADING_STATUS.LOADING}
+                    className="mt-[20px]"
+                    sizeVariant="md"
+                  >
+                    {loadingStatus === LOADING_STATUS.LOADING
+                      ? "Signing up..."
+                      : "SIGNUP"}
+                  </Button>
                 </form>
 
                 <div className="flex mt-2 justify-center">

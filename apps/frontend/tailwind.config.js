@@ -6,10 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "hsl(var(--primary))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         background: "hsl(var(--background))",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }

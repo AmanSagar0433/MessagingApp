@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { jwtDecode } from "jwt-decode";
 import { UserResponse } from "@repo/datamodel/user";
-
+import  ms from "ms";
 const JWT_SECRET = process.env.JWT_SECRET || "secret_password";
 
 // export const generateToken = async (user: User) => {
@@ -13,13 +13,13 @@ const JWT_SECRET = process.env.JWT_SECRET || "secret_password";
 
 export const generateToken = async (userResponse: UserResponse) => {
   return {
-    accessToken: await generateTokenWithExpiration(userResponse, "1d"),
+    accessToken: await generateTokenWithExpiration(userResponse, ms("1d")),
   };
 };
 
 const generateTokenWithExpiration = async (
   userResponse: UserResponse,
-  expiresIn: string
+  expiresIn: number
 ) => {
   try {
     return jwt.sign(userResponse, JWT_SECRET, {
